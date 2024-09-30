@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BunHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h1>BunHub</h1> -->
+    <img id="logo" src="\assets\logo.png" alt="BunHub" id="bunhub-logo">
+
+    <div id="auth-section">
+        <div id="auth-status"></div>
+        <a href="/auth/discord" id="login-btn">Login with Discord</a>
+        <a href="/logout" id="logout-btn" style="display:none;">Logout</a>
+    </div>
+
+    <div id="main-container">
+        <!-- File List -->
+        <div id="file-list-container">
+            <h2>File List:</h2>
+            <div id="file-list"></div>
+        </div>
+
+        <!-- File Upload -->
+        <div id="file-upload-container">
+            <h2>Upload Files:</h2>
+            <div id="drop-area">
+                <p class="file-drop-text">Drop your files here</p>
+            </div>
+        </div>
+    </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
