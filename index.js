@@ -67,7 +67,7 @@ function determineCallbackURL(req, res, next) {
   const ip = req.ip;
   let callbackURL;
 
-  if (ip.startsWith('192.168.')) {
+  if (ip.startsWith('::ffff:192.168.')) {
     callbackURL = CALLBACK_URLS.local;
   } else if (ip === '::1' || ip === '127.0.0.1') {
     callbackURL = CALLBACK_URLS.dev;
