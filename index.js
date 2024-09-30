@@ -8,7 +8,7 @@ const multer = require('multer');
 require('dotenv').config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 const FILE_DIR = path.join(__dirname, 'files');
 
 if (!fs.existsSync(FILE_DIR)) {
