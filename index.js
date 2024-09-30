@@ -11,6 +11,10 @@ const app = express();
 const PORT = 3000;
 const FILE_DIR = path.join(__dirname, 'files');
 
+if (!fs.existsSync(FILE_DIR)) {
+  fs.mkdirSync(FILE_DIR, { recursive: true });
+}
+
 const DISCORD_CLIENT_ID = process.env.DISCORD_CLIENT_ID;
 const DISCORD_CLIENT_SECRET = process.env.DISCORD_CLIENT_SECRET;
 const CALLBACK_URLS = {
