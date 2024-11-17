@@ -76,3 +76,68 @@ input[type="text"] {
   padding: 10px;
   margin-bottom: 10px;
 }
+
+button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-button i {
+  font-size: 1.2em;
+}
+
+.delete-button:hover i {
+  color: red;
+}
+
+.copy-button i {
+  font-size: 1.2em;
+}
+
+.copy-button:hover i {
+  color: rgb(85, 85, 228);
+}
+
+.download-button:hover {
+  color: rgb(88, 206, 75);
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.file-item a {
+  flex-grow: 1;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background-color: #333;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.file-item span {
+  flex: 1;
+  padding: 5px;
+  cursor: default;
+}
